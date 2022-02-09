@@ -13,6 +13,11 @@ exports[`HomePage Container Snap Test render() renders the component 1`] = `
       <div
         className="col-lg-12"
       >
+        <img
+          alt="react-logo"
+          className="rotate"
+          src="react.svg"
+        />
         <h1>
           React Boilerplate
         </h1>
