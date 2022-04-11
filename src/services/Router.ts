@@ -1,7 +1,7 @@
 import { RouteProps } from 'react-router-dom';
 import HomePage from '../container/Home/Home.page';
 
-interface IRoute extends RouteProps {
+export interface IRoute extends RouteProps {
   key: number;
   path: string;
   exact: boolean;

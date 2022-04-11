@@ -11,6 +11,13 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#root {
+  height: inherit;
 }
 
 /* Sections
@@ -22,8 +29,13 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  padding: 0;
+  height: inherit;
+  min-height: 100vh;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /**

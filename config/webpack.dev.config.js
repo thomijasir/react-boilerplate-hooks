@@ -10,9 +10,9 @@ module.exports = {
   entry: [paths.appIndexJs],
   mode: 'development',
   output: {
-    publicPath: 'auto',
+    publicPath: '/',
     path: paths.appBuild,
-    filename: 'bundle.js',
+    filename: 'bundle.[hash].js',
   },
   module: {
     rules: [
@@ -49,8 +49,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|ico|gif|jpe?g|woff(2)?|ttf|eot)$/,
-        use: ['file-loader'],
+        test: /\.(ico|gif|jpe?g|jpg|png|svg|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
       },
     ],
   },

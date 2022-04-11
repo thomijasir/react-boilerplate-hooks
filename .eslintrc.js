@@ -24,7 +24,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
   rules: {
     'prettier/prettier': ['error', prettierOptions],
-    'arrow-body-style': [2, 'as-needed'],
+    'arrow-body-style': ['error', 'as-needed'],
     'no-underscore-dangle': 0,
     'class-methods-use-this': 0,
     'import/imports-first': 0,
@@ -70,7 +70,8 @@ module.exports = {
     'for-direction': 0,
     'global-require': 1,
     'no-console': 1,
-    'no-unused-vars': 2,
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
     'no-use-before-define': 0,
     'prefer-template': 2,
     'react/destructuring-assignment': 0,

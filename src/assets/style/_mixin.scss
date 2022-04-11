@@ -1,0 +1,33 @@
+@import './var';
+// X Large Screen
+@mixin xGrid {
+  @media only screen and (min-width: 1700px) {
+    @content;
+  }
+}
+
+// On Large Screen
+@mixin lGrid {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// On Desktop Screen
+@mixin mGrid {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Super Small Screen
+@mixin xSmall {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin openSansSemiBold {
+  font-weight: $font-w-semi-bold;
+  font-family: $font-second;
+}

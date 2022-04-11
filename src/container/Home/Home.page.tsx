@@ -1,4 +1,5 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect, useContext } from 'react';
+import { AppContext } from '../../context/AppProvider';
 import { TITLE_HOME_PAGE } from '../../constants';
 import reactLogo from '../../assets/images/react.svg';
 import './Home.scss';
@@ -6,15 +7,16 @@ import './Home.scss';
 export interface IProps {}
 
 const Home: FC<IProps> = () => {
+  const context = useContext(AppContext);
   const [title] = useState('React Boilerplate');
 
   useEffect(() => {
-    // eslint-disable-next-line no-alert
-    alert(TITLE_HOME_PAGE);
+    console.log(TITLE_HOME_PAGE);
+    console.log('HOME CONTEXT: ', context);
   }, []);
 
   return (
-    <div className="home-page">
+    <div className="home-page safe-area">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12">

@@ -2,8 +2,10 @@ import 'react-app-polyfill/stable';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import APP_ROUTER from './services/Router';
-import withClearCache from './cache';
+import APP_ROUTER, { IRoute } from './services/Router';
+import ClearCache from './ClearCache';
+import AppProvider, { AppContext } from './context/AppProvider';
+
 import './assets/app.scss';
 
 interface Props {}
@@ -18,13 +20,15 @@ class App extends Component<Props, State> {
       appReady: true,
     };
   }
+  componentDidMount() {
+    console.log('Context Available: ', this.context);
+  }
 
   // DID MOUNT IF HAVE INITIALIZATION DATA BEFORE RENDER
-
   renderRouter = () => (
     <BrowserRouter>
       <Routes>
-        {APP_ROUTER.map((item) => (
+        {APP_ROUTER.map((item: IRoute) => (
           <Route {...item} element={<item.element />} />
         ))}
         <Route path="*" element={<p>404 Page</p>} />
@@ -37,8 +41,14 @@ class App extends Component<Props, State> {
     return appReady && this.renderRouter();
   }
 }
+// Insert Context To Class
+App.contextType = AppContext;
 
-// Clear Component
-const ClearCacheComponent = withClearCache(App);
-
-ReactDOM.render(<ClearCacheComponent />, document.getElementById('root'));
+ReactDOM.render(
+  <ClearCache>
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </ClearCache>,
+  document.getElementById('root'),
+);

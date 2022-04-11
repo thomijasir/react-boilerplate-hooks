@@ -4,11 +4,11 @@ const config = require('../config/webpack.dev.config');
 
 // Change port to suit your preference
 const Port = 8888;
-const Host = 'localhost';
+const Host = '0.0.0.0';
 // Options Dev Servers
 const options = {
   // Open To Browser
-  open: true,
+  open: [`http://localhost:${Port}`],
   // History Link API For URL
   historyApiFallback: true,
   // Enable webpack's Hot Module Replacement feature

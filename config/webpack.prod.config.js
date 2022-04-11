@@ -17,7 +17,7 @@ module.exports = {
   mode: 'production',
   stats: 'errors-only',
   output: {
-    publicPath: 'auto',
+    publicPath: '/',
     path: paths.appBuild,
     filename: '[name].[contenthash].bundle.js',
     clean: true,
