@@ -2,7 +2,7 @@
 
 exports[`HomePage Container Snap Test render() renders the component 1`] = `
 <div
-  className="home-page"
+  className="home-page safe-area"
 >
   <div
     className="container-fluid"
