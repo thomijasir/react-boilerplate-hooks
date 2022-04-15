@@ -4,16 +4,17 @@ import appReducers, {
   initialState,
   makeInitialState,
   IAppContext,
-  IErrorState,
   SET_LOADING,
   SET_ERROR,
 } from './AppReducers';
+import { ILoadingGeneralProps } from '../components/LoadingGeneral/LoadingGeneral.comp';
+import { IErrorGeneralProps } from '../components/ErrorGeneral/ErrorGeneral.comp';
 import { APP_CONTEXT, RESISTANCE_CONTEXT } from '../constants';
 
 export interface IContext extends IAppContext {
   dispatch: React.Dispatch<any>;
-  setLoading: (value: boolean) => void;
-  setError: (value: IErrorState) => void;
+  setLoading: (value: ILoadingGeneralProps) => void;
+  setError: (value: IErrorGeneralProps) => void;
 }
 
 export const AppContext: React.Context<IContext> =
@@ -33,8 +34,10 @@ const AppProvider: FC = ({ children }) => {
     () => ({
       ...state,
       dispatch,
-      setLoading: (value: boolean) => setAction(value, SET_LOADING, dispatch),
-      setError: (value: IErrorState) => setAction(value, SET_ERROR, dispatch),
+      setLoading: (value: ILoadingGeneralProps) =>
+        setAction(value, SET_LOADING, dispatch),
+      setError: (value: IErrorGeneralProps) =>
+        setAction(value, SET_ERROR, dispatch),
     }),
     [state],
   );

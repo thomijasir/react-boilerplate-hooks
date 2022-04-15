@@ -1,25 +1,23 @@
 import { APP_CONTEXT } from '../constants';
-
-export interface IErrorState {
-  isError: boolean;
-  image?: string;
-  title?: string;
-  message?: string;
-}
+import { ILoadingGeneralProps } from '../components/LoadingGeneral/LoadingGeneral.comp';
+import { IErrorGeneralProps } from '../components/ErrorGeneral/ErrorGeneral.comp';
 
 export interface IAppContext {
-  isLoading: boolean;
-  errorState: IErrorState;
+  loadingState: ILoadingGeneralProps;
+  errorState: IErrorGeneralProps;
 }
 
 // INITIAL STATE
 export const initialState: any = {
-  isLoading: false,
+  loadingState: {
+    isLoading: false,
+    text: 'Loading...',
+  },
   errorState: {
     isError: false,
-    image: '',
     title: 'Something Wrong!',
-    message: 'Opps, Failure Open Apps',
+    message:
+      'Opps, please check app configuration or service that might cause this error.',
   },
 };
 
@@ -41,7 +39,7 @@ export default (state: IAppContext, action: any) => {
     case SET_LOADING:
       return {
         ...state,
-        isLoading: action.payload,
+        loadingState: action.payload,
       };
     case SET_ERROR:
       return {

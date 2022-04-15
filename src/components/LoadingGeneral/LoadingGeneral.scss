@@ -1,0 +1,40 @@
+@import '../../assets/style/colors';
+@import '../../assets//style/var';
+.loading-mask {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition-duration: 0.2s;
+  text-align: center;
+  justify-content: center;
+  &.on {
+    opacity: 1;
+    z-index: 9999;
+  }
+}
+
+.loading-text {
+  margin-top: -18px; 
+}
+
+.rotate {
+  width: 10rem;
+  height: 10rem;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

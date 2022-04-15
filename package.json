@@ -32,7 +32,6 @@
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
     "analyze": "source-map-explorer dist/*.js",
     "prepare": "husky install",
-    "release": "standard-version",
     "lint:fix": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx --fix",
     "serve:dev": "webpack-dev-server --config scripts/webpack.dev.config.js",
     "serve:prod": "lite-server --baseDir='dist'",
@@ -45,10 +44,6 @@
     "test:coverage": "jest --config=jest.config.json --coverage",
     "test:view": "jest --config=jest.config.json --coverage && open coverage/lcov-report/index.html",
     "test:open": "open coverage/lcov-report/index.html",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major",
-    "release:first": "npm run release -- --first-release",
     "install:prod": "npm install --only=production"
   },
   "keywords": [
@@ -68,7 +63,6 @@
   "homepage": "https://github.com/thomijasir/react-boilerplate-hooks#readme",
   "dependencies": {
     "axios": "^0.26.0",
-    "date-fns": "^2.28.0",
     "espree": "^9.3.0",
     "file-loader": "^6.2.0",
     "react": "^17.0.2",

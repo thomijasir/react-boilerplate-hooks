@@ -1,9 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
-);
 module.exports = {
   env: {
     jest: true,
@@ -21,10 +15,18 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y'],
+  plugins: [
+    'react',
+    'prettier',
+    'jsx-a11y',
+    'react-hooks',
+    '@typescript-eslint',
+  ],
   rules: {
-    'prettier/prettier': ['error', prettierOptions],
-    'arrow-body-style': ['error', 'as-needed'],
+    'prettier/prettier': 'error',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    'arrow-body-style': [0, 'as-needed'],
     'no-underscore-dangle': 0,
     'class-methods-use-this': 0,
     'import/imports-first': 0,
@@ -43,6 +45,7 @@ module.exports = {
         SwitchCase: 1,
       },
     ],
+    'react-hooks/exhaustive-deps': 'off',
     'jsx-a11y/aria-props': 2,
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/heading-has-content': 0,
@@ -71,7 +74,7 @@ module.exports = {
     'global-require': 1,
     'no-console': 1,
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 1,
     'no-use-before-define': 0,
     'prefer-template': 2,
     'react/destructuring-assignment': 0,
@@ -84,6 +87,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 0,
     'react/prefer-stateless-function': 0,
     'react/require-default-props': 0,
+    'react/prop-types': 0,
+    'react/default-props-match-prop-types': 0,
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,

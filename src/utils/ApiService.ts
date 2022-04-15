@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
 import packageInfo from '../../package.json';
-// https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
 class ApiService {
   static INSTANCE: ApiService;
   static getInstance = () => {
@@ -8,18 +8,18 @@ class ApiService {
     return ApiService.INSTANCE;
   };
 
-  anteikuClient: AxiosInstance;
+  APIClient: AxiosInstance;
 
   constructor() {
-    this.anteikuClient = axios.create({
-      baseURL: process.env.ANTEIKU_URL,
+    this.APIClient = axios.create({
+      baseURL: '/',
       timeout: parseInt(process.env.TIMEOUT || '30000', 10),
       headers: {
         'X-Client-Version': packageInfo.version,
       },
     });
 
-    this.anteikuClient.interceptors.response.use(
+    this.APIClient.interceptors.response.use(
       (config: any) => config,
       this.errorHandle,
     );
@@ -28,7 +28,7 @@ class ApiService {
   errorHandle = (error: any) => Promise.reject(error);
 
   setBearer = (token: string): void => {
-    this.anteikuClient.defaults.headers.common = {
+    this.APIClient.defaults.headers.common = {
       Authorization: `Bearer ${token}`,
     };
   };

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading General Component Snap Test render() renders the component 1`] = `
+<div
+  className="template-comp"
+>
+  Component
+</div>
+`;

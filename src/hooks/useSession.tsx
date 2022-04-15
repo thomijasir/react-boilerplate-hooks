@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const getSavedValue = (key: string, initialValue: any) => {
-  const storageValue = sessionStorage.getItem(key);
+  const storageValue = window.sessionStorage.getItem(key);
   if (storageValue) {
     return JSON.parse(storageValue);
   }
@@ -15,7 +15,7 @@ const useSession = (key: string, initialValue: any) => {
   const [value, setValue] = useState(() => getSavedValue(key, initialValue));
 
   useEffect(() => {
-    sessionStorage.setItem(key, JSON.stringify(value));
+    window.sessionStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
 
   return [value, setValue];

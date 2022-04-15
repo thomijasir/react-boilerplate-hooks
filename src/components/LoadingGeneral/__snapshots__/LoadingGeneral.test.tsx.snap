@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading General Component Snap Test render() renders the component 1`] = `
+<div
+  className="loading-mask "
+>
+  <div
+    className="spinner"
+  >
+    <img
+      alt="loading"
+      className="rotate"
+      src="react.svg"
+    />
+  </div>
+  <div
+    className="loading-text"
+  >
+    Loading..
+  </div>
+</div>
+`;

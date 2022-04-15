@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error General Component Snap Test render() renders the component 1`] = `
+<div
+  className="error-general "
+>
+  <div
+    className="error-container"
+  >
+    <img
+      alt="errorPage"
+      src="general_error_default.png"
+    />
+    <h2
+      className="error-title"
+    >
+      Hello World
+    </h2>
+    <p
+      className="error-desc"
+    >
+      Sample Word
+    </p>
+  </div>
+  <div
+    className="error-footer"
+  >
+    <div
+      className="version-info"
+    >
+      v
+      0.0.1
+    </div>
+  </div>
+</div>
+`;

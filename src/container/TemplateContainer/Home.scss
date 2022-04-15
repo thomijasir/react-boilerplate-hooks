@@ -1,0 +1,21 @@
+.home-page {
+  h1 {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  line-height: 1.5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  .rotate {
+    animation: rotation 3s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(359deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+}
