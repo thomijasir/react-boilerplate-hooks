@@ -5,7 +5,6 @@ const Dotenv = require('dotenv-webpack');
 const paths = require('../scripts/paths');
 
 module.exports = {
-  // https: true,
   devtool: 'inline-source-map',
   entry: [paths.appIndexJs],
   mode: 'development',
