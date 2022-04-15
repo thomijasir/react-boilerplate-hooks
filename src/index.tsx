@@ -1,4 +1,4 @@
-import 'react-app-polyfill/stable';
+// import 'react-app-polyfill/stable';
 import React, { FC, useContext, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,9 +9,7 @@ import LoadingGeneral from './components/LoadingGeneral/LoadingGeneral.comp';
 import ErrorGeneral from './components/ErrorGeneral/ErrorGeneral.comp';
 import './assets/app.scss';
 
-interface IAppProps {}
-
-const App: FC<IAppProps> = () => {
+const App: FC = () => {
   const [appReady, setAppReady] = useState<boolean>(false);
   const context = useContext(AppContext);
 
@@ -39,14 +37,12 @@ const App: FC<IAppProps> = () => {
   );
 };
 
-const targetElement = document.getElementById('root');
-if (targetElement) {
-  const root = ReactDOM.createRoot(targetElement);
-  root.render(
-    <ClearCache>
-      <AppProvider>
-        <App />
-      </AppProvider>
-    </ClearCache>,
-  );
-}
+ReactDOM.createRoot(
+  document.getElementById('root') || document.createDocumentFragment(),
+).render(
+  <ClearCache>
+    <AppProvider>
+      <App />
+    </AppProvider>
+  </ClearCache>,
+);

@@ -2,7 +2,7 @@
   "name": "react-boilerplate-hooks",
   "version": "0.0.1",
   "node-version": "16.13.0",
-  "description": "project template with the latest",
+  "description": "project template with the latest environment",
   "main": "index.js",
   "engines": {
     "npm": ">=8.0.0",
@@ -63,7 +63,6 @@
   "homepage": "https://github.com/thomijasir/react-boilerplate-hooks#readme",
   "dependencies": {
     "axios": "^0.26.0",
-    "espree": "^9.3.0",
     "react": "^18.0.0",
     "react-app-polyfill": "^3.0.0",
     "react-dom": "^18.0.0",
