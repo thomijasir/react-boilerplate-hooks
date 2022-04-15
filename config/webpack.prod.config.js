@@ -21,6 +21,7 @@ module.exports = {
     path: paths.appBuild,
     filename: '[name].[contenthash].bundle.js',
     clean: true,
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
   optimization: {
     splitChunks: {
@@ -63,15 +64,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|ico|gif|jpe?g|woff(2)?|ttf|eot)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/',
-            },
-          },
-        ],
+        test: /\.(ico|gif|jpe?g|jpg|png|svg|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
       },
       {
         test: /manifest.json$/,

@@ -1,12 +1,8 @@
-import { useState, useEffect, ReactElement } from 'react';
+import { useState, useEffect, ReactElement, FC } from 'react';
 import axios, { AxiosResponse } from 'axios';
 import packageJson from '../package.json';
 
-interface IClearCache {
-  children: ReactElement;
-}
-
-const ClearCache = ({ children }: IClearCache) => {
+const ClearCache: FC<{ children: ReactElement }> = ({ children }) => {
   const [isLatestBuildDate, setIsLatestBuildDate] = useState<boolean>(false);
 
   useEffect(() => {

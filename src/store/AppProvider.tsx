@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useMemo, useReducer } from 'react';
+import React, { FC, ReactElement, useEffect, useMemo, useReducer } from 'react';
 import { setAction } from './AppAction';
 import appReducers, {
   initialState,
@@ -20,7 +20,7 @@ export interface IContext extends IAppContext {
 export const AppContext: React.Context<IContext> =
   React.createContext(initialState);
 
-const AppProvider: FC = ({ children }) => {
+const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
   const [state, dispatch] = useReducer(appReducers, makeInitialState());
   // ? USE RESISTANCE IF APPLICATION NEED DATA ON STORE RESISTANCE TO BROWSER REFRESH
   if (RESISTANCE_CONTEXT) {

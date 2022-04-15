@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import render from 'react-test-renderer';
 import ErrorGeneral from './ErrorGeneral.comp';
 
 afterEach(() => {
@@ -15,8 +14,8 @@ describe('Error General Component Snap Test', () => {
         message: 'Sample Word',
         isError: false,
       };
-      const wrapper = shallow(<ErrorGeneral {...compProps} />);
-      expect(toJson(wrapper)).toMatchSnapshot();
+      const wrapper = render.create(<ErrorGeneral {...compProps} />);
+      expect(wrapper.toJSON()).toMatchSnapshot();
     });
   });
 });

@@ -1,5 +1,6 @@
 {
   "roots": ["<rootDir>/src"],
+  "collectCoverage": false,
   "collectCoverageFrom": [
     "src/**/*.{js,jsx,ts,tsx}",
     "!src/serviceWorker.js",
@@ -8,12 +9,7 @@
     "!src/index.js",
     "!src/cache.js"
   ],
-  "snapshotSerializers": ["enzyme-to-json/serializer"],
-  "setupFiles": [
-    "jest-canvas-mock",
-    "react-app-polyfill/jsdom",
-    "<rootDir>/config/jest.setup.files.js"
-  ],
+  "setupFiles": ["jest-canvas-mock", "react-app-polyfill/jsdom"],
   "testMatch": [
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
     "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"

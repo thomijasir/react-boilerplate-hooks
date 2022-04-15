@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import render from 'react-test-renderer';
 import LoadingGeneral from './LoadingGeneral.comp';
 
 afterEach(() => {
@@ -13,8 +12,8 @@ describe('Loading General Component Snap Test', () => {
       const compProps = {
         isLoading: false,
       };
-      const wrapper = shallow(<LoadingGeneral {...compProps} />);
-      expect(toJson(wrapper)).toMatchSnapshot();
+      const wrapper = render.create(<LoadingGeneral {...compProps} />);
+      expect(wrapper.toJSON()).toMatchSnapshot();
     });
   });
 });

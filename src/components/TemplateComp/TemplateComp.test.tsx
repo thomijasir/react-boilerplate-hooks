@@ -1,6 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
+import render from 'react-test-renderer';
 import TemplateComp from './TemplateComp.comp';
 
 afterEach(() => {
@@ -13,8 +12,8 @@ describe('Loading General Component Snap Test', () => {
       const compProps = {
         title: 'Component',
       };
-      const wrapper = shallow(<TemplateComp {...compProps} />);
-      expect(toJson(wrapper)).toMatchSnapshot();
+      const wrapper = render.create(<TemplateComp {...compProps} />);
+      expect(wrapper.toJSON()).toMatchSnapshot();
     });
   });
 });

@@ -1,6 +1,6 @@
 import 'react-app-polyfill/stable';
 import React, { FC, useContext, useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import APP_ROUTER, { IRoute } from './services/Router';
 import ClearCache from './ClearCache';
@@ -39,11 +39,14 @@ const App: FC<IAppProps> = () => {
   );
 };
 
-ReactDOM.render(
-  <ClearCache>
-    <AppProvider>
-      <App />
-    </AppProvider>
-  </ClearCache>,
-  document.getElementById('root'),
-);
+const targetElement = document.getElementById('root');
+if (targetElement) {
+  const root = ReactDOM.createRoot(targetElement);
+  root.render(
+    <ClearCache>
+      <AppProvider>
+        <App />
+      </AppProvider>
+    </ClearCache>,
+  );
+}
