@@ -7,43 +7,23 @@ const ClearCache: FC<{ children: ReactElement }> = ({ children }) => {
 
   useEffect(() => {
     axios.get('/meta.json').then((response: AxiosResponse) => {
-      const latestVersionDate = response.data.buildDate;
-      const currentVersionDate = packageJson.buildDate;
-      const shouldForceRefresh = buildDateGreaterThan(
-        latestVersionDate,
-        currentVersionDate,
-      );
-      if (shouldForceRefresh) {
-        setIsLatestBuildDate(false);
-        refreshCacheAndReload();
+      const latestBuild = response.data.buildDate;
+      const currentBuild = packageJson.buildDate;
+      // * CHECK CURRENT BUILD AND LATEST BUILD
+      if (currentBuild > latestBuild) {
+        // * CHECK CACHES BROWSER ABILITY
+        if (caches)
+          caches.keys().then((names) => {
+            names.forEach((name) => {
+              caches.delete(name);
+            });
+          });
+        window.location.reload();
       } else {
         setIsLatestBuildDate(true);
       }
     });
   }, []);
-
-  const buildDateGreaterThan = (
-    latestDate: string,
-    currentDate: string,
-  ): boolean => {
-    const latestDateTime = new Date(latestDate).getTime();
-    const currentDateTime = new Date(currentDate).getTime();
-    if (currentDateTime > latestDateTime) {
-      return true;
-    }
-    return false;
-  };
-
-  const refreshCacheAndReload = (): void => {
-    if (caches) {
-      caches.keys().then((names) => {
-        names.forEach((name) => {
-          caches.delete(name);
-        });
-      });
-    }
-    window.location.reload();
-  };
   return isLatestBuildDate ? children : null;
 };
 export default ClearCache;
