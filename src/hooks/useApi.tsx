@@ -2,7 +2,7 @@ import 'regenerator-runtime/runtime';
 import { useState, useEffect } from 'react';
 import { AxiosInstance, AxiosRequestConfig } from 'axios';
 import useSession from './useSession';
-import ApiService from '../utils/ApiService';
+import ApiService from '../services/ApiService';
 import { ACCESS_TOKEN } from '../constants';
 const { setBearer } = ApiService;
 
