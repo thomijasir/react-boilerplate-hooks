@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { FC, useState, useEffect, useContext } from 'react';
 import { AppContext } from '../../store/AppProvider';
 import { TITLE_HOME_PAGE } from '../../constants';
