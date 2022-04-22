@@ -34,7 +34,6 @@ const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
       sessionStorage.setItem(APP_CONTEXT, JSON.stringify(state));
     }, [state]);
   }
-  console.log('RENDER CONTEXT');
   // ! USE CONTEXT BE WISE, ONLY USE CONTEXT API IF DATA NEED TO PASS TO OTHER COMPONENT
   // ! DON'T USE CONTEXT TO STORE ALL DATA, CONTEXT OR REDUX MIGHT USE HIGH RESOURCE OF RAM
   const handleSetContext = useCallback((payload: any, type: string) => {
