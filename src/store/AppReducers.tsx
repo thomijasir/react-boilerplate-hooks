@@ -8,7 +8,7 @@ export interface IAppContext {
 }
 
 // INITIAL STATE
-export const initialState: any = {
+export const initialState: IAppContext = {
   loadingState: {
     isLoading: false,
     text: 'Loading...',
@@ -21,7 +21,7 @@ export const initialState: any = {
   },
 };
 
-export const makeInitialState = () => {
+export const makeInitialState = (): IAppContext => {
   const getStorageContext = localStorage.getItem(APP_CONTEXT);
   if (getStorageContext) {
     return JSON.parse(getStorageContext);

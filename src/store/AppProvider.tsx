@@ -21,7 +21,7 @@ export interface IContext extends IAppContext {
   setError: (isError: boolean, title?: string, message?: string) => void;
 }
 
-export const AppContext: React.Context<IContext> =
+export const AppContext: React.Context<IAppContext> =
   React.createContext(initialState);
 
 export const AppContextMemoize = React.memo(AppContext.Provider);
