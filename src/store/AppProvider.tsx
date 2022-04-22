@@ -24,9 +24,12 @@ export interface IContext extends IAppContext {
 export const AppContext: React.Context<IAppContext> =
   React.createContext(initialState);
 
-export const AppContextMemoize = React.memo(AppContext.Provider);
+// * MEMOIZATION TO REDUCE EXPENSIVE CALCULATION BY THE CONTEXT
+export const AppProviderMemoize = React.memo(AppContext.Provider);
+export const AppConsumerMemoize = React.memo(AppContext.Consumer);
 
 const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
+  // * LOAD DISPATCHER FROM useREDUCER
   const [state, dispatch] = useReducer(appReducers, makeInitialState());
   // ? USE RESISTANCE IF APPLICATION NEED DATA ON STORE RESISTANCE TO BROWSER REFRESH
   if (RESISTANCE_CONTEXT) {
@@ -34,8 +37,7 @@ const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
       sessionStorage.setItem(APP_CONTEXT, JSON.stringify(state));
     }, [state]);
   }
-  // ! USE CONTEXT BE WISE, ONLY USE CONTEXT API IF DATA NEED TO PASS TO OTHER COMPONENT
-  // ! DON'T USE CONTEXT TO STORE ALL DATA, CONTEXT OR REDUX MIGHT USE HIGH RESOURCE OF RAM
+  // * DEFINE GLOBAL SET ACTION HANDLER DIRECT INTO CONTEXT DATA
   const handleSetContext = useCallback((payload: any, type: string) => {
     dispatch({
       type,
@@ -68,6 +70,8 @@ const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
     },
     [],
   );
+  // ! USE CONTEXT BE WISE, ONLY USE CONTEXT API IF DATA NEED TO PASS TO OTHER COMPONENT
+  // ! DON'T USE CONTEXT TO STORE ALL DATA, CONTEXT OR REDUX MIGHT USE HIGH RESOURCE OF RAM
   const context = useMemo<IContext>(
     () => ({
       ...state,
@@ -78,7 +82,7 @@ const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
     [state],
   );
 
-  return <AppContextMemoize value={context}>{children}</AppContextMemoize>;
+  return <AppProviderMemoize value={context}>{children}</AppProviderMemoize>;
 };
 
 export default AppProvider;
