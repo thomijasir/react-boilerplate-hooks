@@ -17,4 +17,4 @@ const TemplateComp: FC<ITemplateCompProps> = ({ title }) => (
 
 TemplateComp.displayName = TemplateCompNamespace;
 TemplateComp.defaultProps = TemplateCompDefaultProps;
-export default TemplateComp;
+export default React.memo(TemplateComp);

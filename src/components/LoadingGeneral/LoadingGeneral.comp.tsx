@@ -25,4 +25,4 @@ const LoadingGeneral: FC<ILoadingGeneralProps> = ({ isLoading, text }) => (
 
 LoadingGeneral.displayName = loadingGeneralNamespace;
 LoadingGeneral.defaultProps = loadingGeneralDefaultProps;
-export default LoadingGeneral;
+export default React.memo(LoadingGeneral);

@@ -42,4 +42,4 @@ const ErrorGeneral: FC<IErrorGeneralProps> = ({
 ErrorGeneral.displayName = ErrorGeneralNamespace;
 ErrorGeneral.defaultProps = ErrorGeneralDefaultProps;
 
-export default ErrorGeneral;
+export default React.memo(ErrorGeneral);
