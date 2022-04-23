@@ -23,6 +23,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
     'prettier/prettier': 'error',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],

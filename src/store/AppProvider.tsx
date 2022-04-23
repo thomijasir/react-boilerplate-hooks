@@ -33,6 +33,7 @@ const AppProvider: FC<{ children: ReactElement }> = ({ children }) => {
   const [state, dispatch] = useReducer(appReducers, makeInitialState());
   // ? USE RESISTANCE IF APPLICATION NEED DATA ON STORE RESISTANCE TO BROWSER REFRESH
   if (RESISTANCE_CONTEXT) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       sessionStorage.setItem(APP_CONTEXT, JSON.stringify(state));
     }, [state]);

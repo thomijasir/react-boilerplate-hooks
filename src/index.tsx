@@ -21,9 +21,9 @@ const App: FC = () => {
   // }, []);
 
   // * MEMOIZE ROUTER CAN HELP INCREASE INDEX PERFORMANCE APP
-  const renderRouter = () =>
-    useMemo(
-      () => (
+  const renderRouter = useMemo(
+    () =>
+      appReady && (
         <BrowserRouter>
           <Routes>
             {APP_ROUTER.map((item: IRoute) => (
@@ -33,14 +33,14 @@ const App: FC = () => {
           </Routes>
         </BrowserRouter>
       ),
-      [],
-    );
+    [appReady],
+  );
 
   return (
     <>
       <LoadingGeneral {...context.loadingState} />
       <ErrorGeneral {...context.errorState} />
-      {appReady && renderRouter()}
+      {renderRouter}
     </>
   );
 };
