@@ -20,6 +20,12 @@ Also i make my own babel and webpack configuration from scratch so its really sc
 13. Predifine error general and loading general component
 14. and much more
 
+## 🪢 Preload Component & Style
+
+1. Loading General
+2. Error Boundary General
+3. Lazy Image Component
+4. Animation (Fade, Slide, Rotate), Normalize, Flexbox, Sass
 
 ### 🤖 Wanna try in you local machine?
 
