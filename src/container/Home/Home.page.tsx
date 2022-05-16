@@ -11,7 +11,9 @@ const Home: FC<IProps> = () => {
   const [title] = useState('React Boilerplate');
 
   useEffect(() => {
+    // eslint-disable-next-line no-console
     console.log(TITLE_HOME_PAGE);
+    // eslint-disable-next-line no-console
     console.log('HOME CONTEXT: ', context);
   }, []);
 

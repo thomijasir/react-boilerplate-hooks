@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { FC, useState, useEffect, useContext } from 'react';
 import { AppContext } from '../../store/AppProvider';
 import { TITLE_HOME_PAGE } from '../../constants';
@@ -12,7 +11,9 @@ const Home: FC<IProps> = () => {
   const [title] = useState('React Boilerplate');
 
   useEffect(() => {
+    // eslint-disable-next-line no-console
     console.log(TITLE_HOME_PAGE);
+    // eslint-disable-next-line no-console
     console.log('HOME CONTEXT: ', context);
   }, []);
 
