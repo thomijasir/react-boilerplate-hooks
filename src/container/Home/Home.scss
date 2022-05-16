@@ -1,3 +1,4 @@
+@import '../../assets/style/animate';
 .home-page {
   h1 {
     font-family: 'Courier New', Courier, monospace;
@@ -9,13 +10,5 @@
   text-align: center;
   .rotate {
     animation: rotation 3s infinite linear;
-  }
-  @keyframes rotation {
-    from {
-      transform: rotate(359deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
   }
 }

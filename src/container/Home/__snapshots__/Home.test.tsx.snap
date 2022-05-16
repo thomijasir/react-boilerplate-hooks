@@ -14,8 +14,8 @@ exports[`HomePage Container Snap Test render() renders the component 1`] = `
         className="col-lg-12"
       >
         <img
-          alt="react-logo"
-          className="rotate"
+          alt="react.svg"
+          className="image-lazy rotate"
           src="react.svg"
         />
         <h1>
