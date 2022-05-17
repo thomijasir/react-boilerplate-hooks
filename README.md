@@ -38,7 +38,7 @@ just pull this project run the react, and required **node 16.13**.
 *don't heistate if to reach me if you have any idea to improve this boilerplate... ☕️*
 
 <p align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/8123499/165881055-7f983137-a796-4d67-85b7-25daee341ad2.gif">
+  <img width="500" src="https://user-images.githubusercontent.com/8123499/168716602-d04e01ec-6317-4f46-86eb-e421c945f8f5.gif">
 </p>
 
 
