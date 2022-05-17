@@ -9,7 +9,7 @@ export interface IProps {}
 
 const Home: FC<IProps> = () => {
   const context = useContext(AppContext);
-  const [title] = useState('React Boilerplate');
+  const [title] = useState('Boilerplate');
 
   useEffect(() => {
     // eslint-disable-next-line no-console
@@ -25,11 +25,13 @@ const Home: FC<IProps> = () => {
           <div className="col-lg-12">
             <Image src={reactLogo} className="rotate" alt="react-logo" />
             <h1>{title}</h1>
-            <p>
-              Project Template with the latest react hook, simple clean and no
-              vulnerability package
+            <span className="typing-master">
+              Project Template with the latest react hook, <br /> simple clean
+              and no vulnerability package.
+            </span>
+            <p className="credits">
+              React Template by <b>Thomi Jasir</b>
             </p>
-            <small>React Template by Thomi Jasir</small>
           </div>
         </div>
       </div>

@@ -19,14 +19,23 @@ exports[`HomePage Container Snap Test render() renders the component 1`] = `
           src="react.svg"
         />
         <h1>
-          React Boilerplate
+          Boilerplate
         </h1>
-        <p>
-          Project Template with the latest react hook, simple clean and no vulnerability package
+        <span
+          className="typing-master"
+        >
+          Project Template with the latest react hook, 
+          <br />
+           simple clean and no vulnerability package.
+        </span>
+        <p
+          className="credits"
+        >
+          React Template by 
+          <b>
+            Thomi Jasir
+          </b>
         </p>
-        <small>
-          React Template by Thomi Jasir
-        </small>
       </div>
     </div>
   </div>
