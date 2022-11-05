@@ -21,9 +21,10 @@ Also i make my own babel, jest and webpack configuration from scratch so its eas
 13. Predefined error general and loading general component
 14. Pre-configure Jest Testing & RTL
 15. Pre-configure commitlint & Husky
-16. Pre-configure eslint, prettier, tsconfig, npmrc
+16. Pre-configure eslint, prettier, tsconfig, npmrc.
 17. Stable node in LTS/gallium
 18. Support Micro-Frontend ecosystem.
+19. Pre-configure script for multiple environment.
 19. and much more
 
 ## 🪢 Preload Hooks, Component & Style
