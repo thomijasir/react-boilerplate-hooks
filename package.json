@@ -1,12 +1,13 @@
 {
   "name": "react-boilerplate-hooks",
   "version": "0.0.1",
-  "node-version": "16.13.0",
+  "node-version": "16.18.0",
   "description": "project template with the latest environment",
   "main": "index.js",
   "engines": {
-    "npm": ">=8.0.0",
-    "node": "~16.13.0"
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.20.0",
+    "node": "~16.18.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -98,8 +99,11 @@
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
     "jest": "^27.5.0",
