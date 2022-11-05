@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "node scripts/webpack.dev.server.js",
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
-    "test": "jest --config=jest.config.json",
+    "test": "jest --config config/jest.config.json",
     "build": "npm run clean; node scripts/update.build.js && webpack --config config/webpack.prod.config.js",
     "clean": "rm -rf dist/*",
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
@@ -42,10 +42,11 @@
     "dev:stag": "cp .env-stag.env .env && npm run dev",
     "dev:prod": "cp .env-prod.env .env && npm run dev",
     "dev:preprod": "cp .env-preprod.env .env && npm run dev",
-    "test:coverage": "jest --config=jest.config.json --coverage",
-    "test:view": "jest --config=jest.config.json --coverage && open coverage/lcov-report/index.html",
+    "test:coverage": "jest --config config/jest.config.json --coverage",
+    "test:watch": "jest --config config/jest.config.json --watch",
+    "test:view": "jest --config config/jest.config.json --coverage && open coverage/lcov-report/index.html",
     "test:open": "open coverage/lcov-report/index.html",
-    "install:prod": "npm install --only=production"
+    "install:prod": "yarn install --production=true"
   },
   "keywords": [
     "react",

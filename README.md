@@ -1,9 +1,10 @@
 # React Hook 18 Boilerplate 🚀
-Hi everyone this is my boilerplate/template project for react hook 18, i use pre-define template to speed up my development process, this template has featured many things that i believe this is has best practice in react, and also this template has no vulnerability issue and also this template has build from scratch, that only install package that i really need.
 
-Also i make my own babel and webpack configuration from scratch so its really scalabel for me, if i want leverage the project its easy to do that, because all of the settings from development and build settings has on my own hand. easy to tweaks for me and easy for maintenance.
+Hi everyone this is my boilerplate/template project for react hook 18, i use pre-define template to speed up  development process, this template has featured many things that i believe this is has best practice in react, and also this template has no vulnerability issue and also this template has build from scratch, that only install package that i really need.
 
-## 🔑 Feature React Boileplate
+Also i make my own babel and webpack configuration from scratch so its really scalable for me, if i want leverage the project its easy to do that, because all of the settings from development and build settings has on my own hand. easy to tweaks for me and easy for maintenance.
+
+## 🔑 Feature React Boilerplate
 
 1. React Hook 18
 2. Custom Hook API
@@ -11,13 +12,13 @@ Also i make my own babel and webpack configuration from scratch so its really sc
 4. Custom App Context (Inspire Redux)
 5. Full Restrict TypeScript
 6. New Architecture React Hook Template
-7. Predifine Memoization and component cache
+7. Predefined Memoization and component cache
 8. Pre install React router 6
 9. Fast webpack build
 10. Customize webpack bundle and build
 11. Custom babel setting
-12. Predifine eslint settings
-13. Predifine error general and loading general component
+12. Predefined eslint settings
+13. Predefined error general and loading general component
 14. and much more
 
 ## 🪢 Preload Hooks, Component & Style
@@ -30,17 +31,15 @@ Also i make my own babel and webpack configuration from scratch so its really sc
 
 ### 🤖 Wanna try in you local machine?
 
-just pull this project run the react, and required **node 16.13**.
+just pull this project run the react, and required **node 16.18 LTS/gallium** and yarn >= 1.20.0 installed on you machine.
+
 ```
-- npm install
-- npm run dev:stag
+- yarn install
+- yarn dev:stag
 ```
+
 *don't heistate if to reach me if you have any idea to improve this boilerplate... ☕️*
 
 <p align="center">
   <img width="500" src="https://user-images.githubusercontent.com/8123499/168716602-d04e01ec-6317-4f46-86eb-e421c945f8f5.gif">
 </p>
-
-
-
-

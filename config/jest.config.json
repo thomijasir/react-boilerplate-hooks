@@ -1,13 +1,14 @@
 {
+  "rootDir": "../",
   "roots": ["<rootDir>/src"],
   "collectCoverage": false,
   "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/serviceWorker.js",
-    "!src/utils/Lib.js",
-    "!src/**/*.d.ts",
-    "!src/index.js",
-    "!src/cache.js"
+    "<rootDir>/src/**/*.{js,jsx,ts,tsx}",
+    "!<rootDir>/src/serviceWorker.js",
+    "!<rootDir>/src/utils/Lib.js",
+    "!<rootDir>/src/**/*.d.ts",
+    "!<rootDir>/src/index.js",
+    "!<rootDir>/src/cache.js"
   ],
   "setupFiles": ["jest-canvas-mock", "react-app-polyfill/jsdom"],
   "testMatch": [
