@@ -1,8 +1,8 @@
 # React Hook 18 Boilerplate 🚀
 
-Hi everyone this is my boilerplate/template project for react hook 18, i use pre-define template to speed up  development process, this template has featured many things that i believe this is has best practice in react, and also this template has no vulnerability issue and also this template has build from scratch, that only install package that i really need.
+Hi everyone this is my boilerplate/architecture project for react hook 18, i use pre-define template to speed up development process, this boilerplate has featured many things that i believe this is has best practice in react, and also this template has no vulnerability issue and also this template has build from scratch, that only install package that i really need.
 
-Also i make my own babel and webpack configuration from scratch so its really scalable for me, if i want leverage the project its easy to do that, because all of the settings from development and build settings has on my own hand. easy to tweaks for me and easy for maintenance.
+Also i make my own babel, jest and webpack configuration from scratch so its easy to improve in future if we want to update/upgrade, super high performance and high scalability because its ready to use for micro-frontend services, because all of the settings from development and build settings has on my own hand. easy to tweaks for me and easy for maintenance.
 
 ## 🔑 Feature React Boilerplate
 
@@ -10,16 +10,21 @@ Also i make my own babel and webpack configuration from scratch so its really sc
 2. Custom Hook API
 3. Custom Context Data Management
 4. Custom App Context (Inspire Redux)
-5. Full Restrict TypeScript
+5. Full Restrict TypeScript & Node Engine
 6. New Architecture React Hook Template
 7. Predefined Memoization and component cache
 8. Pre install React router 6
-9. Fast webpack build
+9. Fast webpack 5 build
 10. Customize webpack bundle and build
 11. Custom babel setting
 12. Predefined eslint settings
 13. Predefined error general and loading general component
-14. and much more
+14. Pre-configure Jest Testing & RTL
+15. Pre-configure commitlint & Husky
+16. Pre-configure eslint, prettier, tsconfig, npmrc
+17. Stable node in LTS/gallium
+18. Support Micro-Frontend ecosystem.
+19. and much more
 
 ## 🪢 Preload Hooks, Component & Style
 
@@ -31,7 +36,7 @@ Also i make my own babel and webpack configuration from scratch so its really sc
 
 ### 🤖 Wanna try in you local machine?
 
-just pull this project run the react, and required **node 16.18 LTS/gallium** and yarn >= 1.20.0 installed on you machine.
+just pull this project run the react, and required **node 16.18 LTS/gallium** and **yarn >= 1.20.0** installed on you machine.
 
 ```
 - yarn install
