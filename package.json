@@ -70,8 +70,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.2.1",
     "react-test-renderer": "^18.0.0",
-    "regenerator-runtime": "^0.13.9",
-    "sass": "^1.51.0"
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
