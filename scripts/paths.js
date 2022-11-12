@@ -23,7 +23,8 @@ module.exports = {
   appFavicon: resolveApp('public/favicon.ico'), // App Public Access
   appMeta: resolveApp('public/meta.json'), // App Meta For Cache
   appManifest: resolveApp('public/manifest.json'), // App Meta For Cache
-  appRobotGoogle: resolveApp('public/robots.txt'), // App Meta For Cache
+  appRobotGoogle: resolveApp('public/robots.txt'), // Robots
+  resolveApp,
 };
 
 // Reference Configuration WebPack

@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -47,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        include: [path.resolve(paths.appSrc)],
+        include: [paths.appSrc],
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -77,9 +76,9 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     modules: ['node_modules'],
     alias: {
-      Components: path.resolve(paths.appSrc, 'components'),
-      Containers: path.resolve(paths.appSrc, 'containers'),
-      Utils: path.resolve(paths.appSrc, 'utils'),
+      Components: paths.resolveApp('src/components'),
+      Containers: paths.resolveApp('src/container'),
+      Utils: paths.resolveApp('src/utils'),
     },
   },
   plugins: [
