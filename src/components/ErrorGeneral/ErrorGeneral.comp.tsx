@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import ERROR_DEFAULT from '../../assets/images/general_error_default.png';
 import packageInfo from '../../../package.json';
-import './ErrorGeneral.scss';
+import './ErrorGeneral.css';
 
 export interface IErrorGeneralProps {
   title?: string;
@@ -26,14 +26,18 @@ const ErrorGeneral: FC<IErrorGeneralProps> = ({
   isError,
 }) => {
   return (
-    <div className={`error-general ${isError ? 'on' : ''}`}>
+    <div
+      className={`error-general transition duration-150 ease-in-out ${
+        isError ? 'on' : ''
+      }`}
+    >
       <div className="error-container">
         <img src={image} alt="errorPage" />
         <h2 className="error-title">{title}</h2>
         <p className="error-desc">{message}</p>
       </div>
       <div className="error-footer">
-        <div className="version-info">v{packageInfo.version}</div>
+        <p className="text-sm">v{packageInfo.version}</p>
       </div>
     </div>
   );

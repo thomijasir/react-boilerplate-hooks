@@ -31,8 +31,8 @@ module.exports = {
         },
       },
       {
-        test: /\.(css|scss)$/,
-        include: [path.resolve(paths.appSrc)],
+        test: /\.css$/i,
+        include: [paths.appSrc],
         use: [
           {
             loader: 'style-loader',
@@ -41,9 +41,11 @@ module.exports = {
             loader: 'css-loader',
           },
           {
-            loader: 'sass-loader',
+            loader: 'postcss-loader',
             options: {
-              sourceMap: true,
+              postcssOptions: {
+                config: paths.appPostCssConfig,
+              },
             },
           },
         ],

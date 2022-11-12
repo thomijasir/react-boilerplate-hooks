@@ -2,42 +2,36 @@
 
 exports[`HomePage Container Snap Test render() renders the component 1`] = `
 <div
-  className="home-page safe-area"
+  className="home-page w-full h-full mt-40"
 >
   <div
-    className="container-fluid"
+    className="w-full text-center"
   >
-    <div
-      className="row"
+    <img
+      alt="react.svg"
+      className="image-lazy rotate w-60 h-60 m-auto"
+      src="react.svg"
+    />
+    <h1
+      className="text-2xl font-bold p-4"
     >
-      <div
-        className="col-lg-12"
-      >
-        <img
-          alt="react.svg"
-          className="image-lazy rotate"
-          src="react.svg"
-        />
-        <h1>
-          Boilerplate
-        </h1>
-        <span
-          className="typing-master"
-        >
-          Project Template with the latest react hook, 
-          <br />
-           simple clean and no vulnerability package.
-        </span>
-        <p
-          className="credits"
-        >
-          React Template by 
-          <b>
-            Thomi Jasir
-          </b>
-        </p>
-      </div>
-    </div>
+      Boilerplate
+    </h1>
+    <span
+      className="typing-master text-base xs:text-xs sm:text-base"
+    >
+      Project Template with the latest react hook, 
+      <br />
+       simple clean and no vulnerability package.
+    </span>
+    <p
+      className="credits text-sm"
+    >
+      React with tailwind flavour by 
+      <b>
+        Thomi Jasir
+      </b>
+    </p>
   </div>
 </div>
 `;

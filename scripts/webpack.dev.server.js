@@ -29,7 +29,7 @@ const options = {
   liveReload: false,
   // Port Listening
   port: 'auto',
-	allowedHosts: 'all',
+  allowedHosts: 'all',
 };
 // Compiler & Serve Service
 const compiler = webpack(config);

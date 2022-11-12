@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BASE LAYER */
+@layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-Bold.ttf');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('./fonts/OpenSans-Italic.ttf');
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'SF Pro Text';
+    src: url('./fonts/SFProText-Regular.ttf');
+  }
+}
+
+/* DEFAULT */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+/* HELPER */
+.dd {
+  @apply border border-orange-600 box-border;
+}
+
+.dr {
+  @apply border border-red-600 box-border;
+}
+
+.dg {
+  @apply border border-green-600 box-border;
+}
+
+.db {
+  @apply border border-blue-600 box-border;
+}

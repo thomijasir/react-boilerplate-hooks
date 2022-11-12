@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import './TemplateComp.scss';
 
 export type ITemplateCompProps = {
   title: string;

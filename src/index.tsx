@@ -6,7 +6,7 @@ import ClearCache from './ClearCache';
 import AppProvider, { AppContext } from './store/AppProvider';
 import LoadingGeneral from './components/LoadingGeneral/LoadingGeneral.comp';
 import ErrorGeneral from './components/ErrorGeneral/ErrorGeneral.comp';
-import './assets/app.scss';
+import './assets/app.css';
 
 const App: FC = () => {
   // ? SET FALSE IF YOU REQUIRED FETCH DATA BEFORE RENDER ROUTER

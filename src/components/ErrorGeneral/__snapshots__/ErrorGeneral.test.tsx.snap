@@ -2,7 +2,7 @@
 
 exports[`Error General Component Snap Test render() renders the component 1`] = `
 <div
-  className="error-general "
+  className="error-general transition duration-150 ease-in-out "
 >
   <div
     className="error-container"
@@ -25,12 +25,12 @@ exports[`Error General Component Snap Test render() renders the component 1`] = 
   <div
     className="error-footer"
   >
-    <div
-      className="version-info"
+    <p
+      className="text-sm"
     >
       v
       0.0.1
-    </div>
+    </p>
   </div>
 </div>
 `;

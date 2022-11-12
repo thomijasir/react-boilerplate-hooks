@@ -1,0 +1,37 @@
+@import '../../assets/style/animate.css';
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+.rotate {
+  animation: rotation 3s infinite linear;
+}
+@keyframes t {
+  from {
+    background-size: 0 200%;
+  }
+}
+
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+.typing-master {
+  font-family: monospace;
+  font-size: 16px;
+  color: #0000;
+  background: linear-gradient(-90deg, #00dffc 3px, #0000 0) 6px 0,
+    linear-gradient(#00dffc 0 0) 0 0;
+  background-size: calc(90 * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.7s infinite steps(1), t calc(90 * 0.2s) steps(90) forwards;
+}
+
+.credits {
+  margin-top: 24px;
+  font-size: 12px;
+}
+

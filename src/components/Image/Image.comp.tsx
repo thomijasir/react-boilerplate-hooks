@@ -1,5 +1,4 @@
 import React, { FC, useCallback, useState, useEffect } from 'react';
-import './Image.scss';
 export interface IImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   placeholderImg?: string;
   errorImg?: string;
