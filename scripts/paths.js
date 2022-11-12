@@ -26,6 +26,7 @@ module.exports = {
   appRobotGoogle: resolveApp('public/robots.txt'), // App Meta For Cache
   appPostCssConfig: resolveApp('config/postcss.config.js'),
   appTailwindConfig: resolveApp('config/tailwind.config.js'),
+  resolveApp,
 };
 
 // Reference Configuration WebPack

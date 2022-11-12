@@ -60,9 +60,9 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js'],
     modules: ['node_modules'],
     alias: {
-      Components: path.resolve(paths.appSrc, 'components'),
-      Containers: path.resolve(paths.appSrc, 'containers'),
-      Utils: path.resolve(paths.appSrc, 'utils'),
+      Components: paths.resolveApp('src/components'),
+      Containers: paths.resolveApp('src/container'),
+      Utils: paths.resolveApp('src/utils'),
     },
   },
   plugins: [
