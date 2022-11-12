@@ -33,7 +33,7 @@
     "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
     "analyze": "source-map-explorer dist/*.js",
     "prepare": "husky install",
-    "serve": "lite-server --baseDir='dist'",
+    "serve": "serve dist/",
     "lint:fix": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx --fix",
     "serve:dev": "webpack-dev-server --config scripts/webpack.dev.config.js",
     "build:stag": "cp .env-stag.env .env && npm run build",
@@ -125,5 +125,5 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },
-  "buildDate": 1668228777867
+  "buildDate": 1668240658780
 }

@@ -1,16 +1,13 @@
-const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 const paths = require('../scripts/paths');
 
 module.exports = {
   devtool: 'source-map',
   entry: {
-    vendor: ['react', 'react-dom'],
     app: paths.appIndexJs,
   },
   mode: 'production',
@@ -18,7 +15,7 @@ module.exports = {
   output: {
     publicPath: '/',
     path: paths.appBuild,
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[name].out.js',
     clean: true,
     assetModuleFilename: 'assets/[hash][ext][query]',
   },
@@ -26,7 +23,6 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
-    minimizer: [new CssMinimizerPlugin()],
   },
   module: {
     rules: [
@@ -85,9 +81,6 @@ module.exports = {
   },
   plugins: [
     new Dotenv(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
     new CopyPlugin({
       patterns: [
         { from: paths.appMeta, to: '.' },
