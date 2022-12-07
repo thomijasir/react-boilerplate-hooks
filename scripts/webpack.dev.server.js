@@ -1,10 +1,14 @@
+require('dotenv').config();
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../config/webpack.dev.config');
 
-const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
+const protocol =
+  process.env.HTTPS === 'true' && process.env.NODE_ENV === 'production'
+    ? 'https'
+    : 'http';
 // Change port to suit your preference
-const Port = 8888;
+const Port = process.env.SERVER_PORT || 9999;
 const Host = '0.0.0.0';
 // Options Dev Servers
 const options = {
@@ -29,7 +33,7 @@ const options = {
   liveReload: false,
   // Port Listening
   port: 'auto',
-	allowedHosts: 'all',
+  allowedHosts: 'all',
 };
 // Compiler & Serve Service
 const compiler = webpack(config);

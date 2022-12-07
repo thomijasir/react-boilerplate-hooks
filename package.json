@@ -25,6 +25,7 @@
     ]
   },
   "scripts": {
+    "start": "npm run dev:stag",
     "dev": "node scripts/webpack.dev.server.js",
     "lint": "eslint src --ext .js --ext .jsx --ext .ts --ext .tsx",
     "test": "jest --config config/jest.config.json",
