@@ -97,6 +97,14 @@ module.exports = {
     'require-yield': 0,
     'react/function-component-definition': 0,
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
   settings: {
     'import/resolver': {
       node: {
